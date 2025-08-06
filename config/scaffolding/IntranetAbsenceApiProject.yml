@@ -7,3 +7,8 @@ packages:
   gitUrl: https://github.com/cgodartSlagsoa
   gitUsername: cgodartSlagsoa
   gitBranch: main
+services:
+- serviceName: project.intranetabsenceapi.integrations:getUtilisateurAbsences
+  packages:
+  - name: IntranetAbsenceApiProject
+    version: "1.0"
