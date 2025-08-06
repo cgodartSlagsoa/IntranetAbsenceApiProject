@@ -8,7 +8,43 @@ packages:
   gitUsername: cgodartSlagsoa
   gitBranch: main
 services:
+- serviceName: project.intranetabsenceapi.integrations:Copy_getUtilisateurAbsences
+  packages:
+  - name: IntranetAbsenceApiProject
+    version: "1.0"
+- serviceName: IntranetAbsence.pub.service:getUtilisateurAbsences
+  packages:
+  - name: intranetAbsence
+    version: "1.0"
+- serviceName: pub.verify:verifyFormat
+  packages:
+  - name: IntranetAbsenceApiProject
+    version: "1.0"
+- serviceName: IntranetAbsence.priv.adapter.select:getAbsencesByUserAndDateRange
+  packages:
+  - name: intranetAbsence
+    version: "1.0"
+- serviceName: IntranetAbsence.priv.adapter.select:getAbsencesByUserAndMonth
+  packages:
+  - name: intranetAbsence
+    version: "1.0"
+- serviceName: pub.flow:getLastFailureCaught
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
+- serviceName: pub.flow:setResponseCode
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
+- serviceName: pub.flow:clearPipeline
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
 - serviceName: project.intranetabsenceapi.integrations:getUtilisateurAbsences
+  packages:
+  - name: IntranetAbsenceApiProject
+    version: "1.0"
+- serviceName: project.intranetabsenceapi.integrations:insertAllAbsences
   packages:
   - name: IntranetAbsenceApiProject
     version: "1.0"
